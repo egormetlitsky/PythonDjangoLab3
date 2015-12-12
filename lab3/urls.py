@@ -31,4 +31,5 @@ urlpatterns = [
     url(r'^my/$', views.MyView.as_view(), name="myview"),
     url(r'^create/$', views.NewBlatView.as_view(), name="newblat"),
     url(r'^(?P<pk>[0-9]+)/edit/$', views.EditBlatView.as_view(), name="editblat"),
+    url(r'^like/$', views.LikeFormView.as_view(), name="like_blat")
 ]

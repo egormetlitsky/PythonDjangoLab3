@@ -11,7 +11,7 @@
         <h1><a href="{% url  'homepage'%}">Blather</a></h1>
         <nav>
             {% if user.is_authenticated %}
-                <li>Logged in as: {{ user }}. {{ user.profilr.bio }}
+                <li>Logged in as: {{ user }}. {{ user.profile.bio }}
                     {% if user.profile.blog %}<a href="{{ user.profile.blog }}">blog</a></li>{% endif %}
                 <li><a href="{% url 'myview' %}">My blats</a></li>
                 <li><a href="{% url 'logout' %}?next=/">Logout</a></li>

@@ -1,0 +1,11 @@
+<form action="{% url 'like_blat' %}" method="post" role="form" class="form">
+    <input type="hidden" name="blat_id" value="{{ blat.id }}">
+    {% if blat.has_liked %}
+        <input type="hidden" name="action" value="unlike">
+        <button type="submit">Unlike</button>
+    {% else %}
+        <input type="hidden" name="action" value="like">
+        <button type="submit">Like!</button>
+    {% endif %}
+    {% csrf_token %}
+</form>
